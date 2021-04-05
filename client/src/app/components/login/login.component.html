@@ -1,0 +1,28 @@
+<div class="login">
+    <div class="field">
+        <form class="formLogin" [formGroup]="form" (ngSubmit)="login()">
+            <h1>Welcome</h1>
+            <input type="email" placeholder="email" formControlName="email">
+            <div class="validation" *ngIf="form.controls.email.errors && form.controls.email.errors.required && form.controls.email.touched">You Must Fill Email</div>
+            <div class="validation" *ngIf="form.controls.email.errors && form.controls.email.errors.email && form.controls.email.touched">You Must Fill Email Correctly</div>
+            <input type="password" placeholder="Password" formControlName="password">
+            <div class="validation" *ngIf="form.controls.password.invalid && form.controls.password.touched">You Must Fill Password</div>
+            <button type="submit" [disabled]="form.invalid">Login</button>
+            <div class="register" (click)="onClickGoRegister()">Creater New User</div>
+        </form>
+
+        <div class="description">
+            <h1>Hello Customer</h1>
+            <p>
+                Come find the largest selection at the best price!
+            </p>
+            <div class="storeProducts">
+                Available Products Selection: {{ProductLogicService.countProducts}}
+            </div>
+
+            <div class="numberOfOrders">
+                Orders Count: {{OrderLogicService.countOrders}}
+            </div>
+        </div>
+    </div>
+</div>

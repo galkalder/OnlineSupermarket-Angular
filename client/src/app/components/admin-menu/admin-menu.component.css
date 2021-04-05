@@ -1,0 +1,58 @@
+.adminMenu {
+  position: fixed;
+  top: 21vh;
+  width: 23%;
+  padding: 5px;
+  background-color: rgba(237, 237, 237, 0.425);
+}
+
+.addProductBtn {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.addProductBtn button {
+  justify-content: center;
+  background-color: #041e42;
+  color: white;
+  font-size: 20px;
+}
+
+.ifAddProductClicked {
+  display: flex;
+  flex-direction: column;
+}
+
+.productName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #041e42;
+  display: flex;
+}
+
+.productName input {
+  text-align: center;
+  border-radius: 40px;
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+.productCategory .categoryDropBox {
+  border-radius: 40px;
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+.productPrice input {
+  text-align: center;
+  border-radius: 40px;
+  width: 100px;
+}

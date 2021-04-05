@@ -1,0 +1,38 @@
+<div class="adminEditModal">
+    <div class="header">
+        <div class="title">
+            <h1>Edit Product</h1>
+        </div>
+        <div class="material-icons" (click)="closeModal()">
+            cancel
+        </div>
+    </div>
+    <div class="main">
+        <div class="productName">
+            <h2>Product Name</h2>
+            <input type="text" value="{{data.product.name}}">
+        </div>
+        <div class="productCategory">
+            <h2>Product Category</h2>
+            <select class="categoryDropBox" name="categories">
+                <option *ngFor="let category of ProductLogicService.categories" value="category.id">{{category.name}}</option>
+            </select>
+        </div>
+        <div class="imageAndButton">
+            <span class="material-icons">
+                add_photo_alternate
+            </span>
+            <div class="image"></div>
+        </div>
+        <div class="price">
+            <h2>Product Price</h2>
+            <input type="text" value="{{data.product.price}}$">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="save">
+            <button mat-raised-button>Save</button>
+        </div>
+    </div>
+</div>
+

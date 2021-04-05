@@ -1,0 +1,56 @@
+<mat-horizontal-stepper [linear]="!isLinear" #stepper class="register">
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>First Step</ng-template>
+            <mat-form-field>
+                <input matInput placeholder="First Name" formControlName="name" required>
+            </mat-form-field>
+            <ng-template matStepLabel>Fill out your name</ng-template>
+
+            <mat-form-field>
+                <input matInput placeholder="last Name" formControlName="lastName" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Email" formControlName="email" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperNext>Next Step</button>
+                <div class="login" (click)="onClickGoLogin()">Back to Login</div>
+            </div>
+         </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Step Two</ng-template>
+            <mat-form-field>
+                <input matInput placeholder="idNumber" formControlName="idNumber" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="password" formControlName="password" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="city" formControlName="city" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+            <div class="login" (click)="onClickGoLogin()">Back to Login</div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div class="done">
+           <P> You are now done!</P>
+        <div class="lastBtns">
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+            <button mat-button (click)="registration()">Register</button>
+        </div>
+        <div class="login" (click)="onClickGoLogin()">Back to Login</div>
+    </div>
+    </mat-step>
+</mat-horizontal-stepper>

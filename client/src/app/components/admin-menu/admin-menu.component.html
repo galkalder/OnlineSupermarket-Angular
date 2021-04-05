@@ -1,0 +1,25 @@
+<div class="adminMenu">
+    <div class="addProductBtn">
+        <button mat-raised-button>Add Product</button>
+    </div>
+    <div class="ifAddProductClicked">
+        <div class="productName">
+            <h2>Product Name</h2>
+            <input type="text">
+        </div>
+        <div class="productImage">
+            <h2>Product Image</h2>
+            <button> Choose File</button>
+        </div>
+        <div class="productCategory">
+            <h2>Product Category</h2>
+            <select class="categoryDropBox" name="categories">
+                <option *ngFor="let category of ProductLogicService.categories" value="category.id">{{category.name}}</option>
+            </select>
+        </div>
+        <div class="productPrice">
+            <h2>Product Price</h2>
+            <input type="text">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="paymentModal">
+    <div class="userDetails">
+      <h1>Enter Payment Details</h1>
+
+        <form class="formDetails" [formGroup]="form" (ngSubmit)="createOrder()">
+     
+            <input type="text" placeholder="Enter City" formControlName="city">
+            <div class="validation" *ngIf="form.controls.city.invalid && form.controls.city.touched">You Must Fill City</div>
+
+
+            <input type="text" placeholder="Enter Street" formControlName="street">
+            <div class="validation" *ngIf="form.controls.street.invalid && form.controls.street.touched">You Must Fill Street</div>
+
+            <input type="date" formControlName="shippingDate" [min]="getToday()" (change)="cheackIsDateValid($event.target.value)">
+            <div class="validation" *ngIf="form.controls.shippingDate.invalid && form.controls.shippingDate.touched">You Must Fill A Valid Shipping Date</div>
+            <span>*Delivery date will arrive in the past three days</span>
+
+            <input type="text" placeholder="Credit Card Number" formControlName="creditCard">
+            <div class="validation" *ngIf="form.controls.creditCard.invalid && form.controls.creditCard.touched">You Must Fill A Valid Credit Card Number</div>
+
+            <button type="submit" [disabled]="form.invalid">Purches</button>
+        </form>
+    </div>
+</div>

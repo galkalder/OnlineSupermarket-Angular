@@ -1,0 +1,17 @@
+<div class="cartProduct">
+    <div class="chosenProducts">
+        <div class="product">
+            <div class="nameAndDelete">
+                <div class="name">{{cartProduct.name}}</div>
+                <div class="material-icons" (click)="CartLogicService.deleteCartProduct(cartProduct.id)">
+                    cancel
+                </div>
+            </div>
+            <div class="image"><img [src]="folderUrl + cartProduct.image"></div>
+            <div class="QtyAndPrice">
+                <div class="Qty">Qty: {{cartProduct.amount}}</div>
+                <div class="price">{{cartProduct.total_price}} $</div>
+            </div>
+        </div>
+    </div>
+</div>

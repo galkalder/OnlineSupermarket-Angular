@@ -1,0 +1,1 @@
+<div class="buttonCategory" (click)="ProductLogicService.getAllCategoryProducts(category.id)" [ngClass]="{clicked:category.id === ProductLogicService.activeCategoryId, unClicked:category.id != ProductLogicService.activeCategoryId}">{{category.name}}</div>

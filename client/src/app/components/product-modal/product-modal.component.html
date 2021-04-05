@@ -1,0 +1,20 @@
+<div class="productModal">
+    <div class="title">
+        <div class="name">
+            {{data.product.name}}
+        </div>
+        <div class="material-icons" (click)="closeModal()">
+            cancel
+        </div>
+    </div>
+    <div class="image">
+        <img [src]="folderUrl + data.product.image">
+    </div>
+    <div class="priceAndBtn">
+        <div class="price">
+            <input type="number" min="1" [(ngModel)]="ProductLogicService.amountValue">
+            price: {{data.product.price}}$
+        </div>
+            <button (click)="CartLogicService.addProductToCart(data.product.id, ProductLogicService.amountValue, data.product.price, data.product.name, data.product.image)">Add To Cart</button>
+    </div>
+</div>

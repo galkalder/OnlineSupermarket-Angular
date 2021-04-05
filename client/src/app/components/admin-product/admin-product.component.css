@@ -1,0 +1,34 @@
+.product {
+  width: 200px;
+  height: 280px;
+  padding: 5px;
+  margin: 15px;
+  background-color: rgba(231, 229, 229, 0.151);
+  border-radius: 10px;
+  border: 1px solid rgba(231, 229, 229, 0.459);
+  box-shadow: 4px 4px 12px -9px rgba(0, 0, 0, 0.767);
+}
+
+.product:hover {
+  border: 1px solid orange;
+}
+
+.image img {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.price {
+  margin-bottom: 7%;
+}
+
+.nameAndEdit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editButton button {
+  margin: 5px;
+  background-color: #041e42;
+  color: white;
+}

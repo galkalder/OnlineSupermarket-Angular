@@ -1,0 +1,15 @@
+<div class="menu">
+    <div class="cartProducts" >
+        <app-cart-product *ngFor="let cartProduct of CartLogicService.cartProducts" [cartProduct]="cartProduct"></app-cart-product>
+    </div>
+    <div class="footer">
+        <div class="paymentButton">
+            <button mat-raised-button (click)="openModalProduct()">Check Out</button>
+        </div>
+        <div class="totalPrice">
+            <div class="price">Total Price: {{CartLogicService.cartTotalPrice()}}$</div>
+            </div>
+        </div>
+</div>
+
+

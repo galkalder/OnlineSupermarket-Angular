@@ -1,0 +1,12 @@
+<div class="content">
+      <div class="allProducts">
+          <div class="admin" *ngIf="UserLogicService.SuccessfulLoginServerResponse.userData.userType == 'admin'">
+            <app-admin-product *ngFor="let product of ProductLogicService.products" [product]="product"></app-admin-product>
+            <div class="empty" *ngFor="let i of counter"></div>
+          </div>
+          <div class="user" *ngIf="UserLogicService.SuccessfulLoginServerResponse.userData.userType == 'user'">
+            <app-product *ngFor="let product of ProductLogicService.products" [product]="product"></app-product>
+            <div class="empty" *ngFor="let i of counter"></div>
+          </div>
+    </div>
+</div>

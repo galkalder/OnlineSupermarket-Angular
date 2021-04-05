@@ -1,0 +1,24 @@
+<div class="header">
+    <div class="title">
+        Super Duper
+    </div>
+    
+    <div class="inputSearch">
+        <mat-icon class="searchIcon">search</mat-icon>
+        <input type="text" placeholder="Search" name="inputSearch" [(ngModel)]="inputValue">
+    </div>
+    <div class="logoutAndName">
+        <div class="userName">{{UserLogicService.SuccessfulLoginServerResponse.userData.name}} {{UserLogicService.SuccessfulLoginServerResponse.userData.lastName}}</div>
+        <button mat-raised-button (click)="onLogoutClicked()">Logout</button>
+    </div>
+</div>
+
+<div class="categoryHeader">
+    <div class="cartHeader">
+        <div class="cartTitle" *ngIf="UserLogicService.SuccessfulLoginServerResponse.userData.userType == 'user'">My Cart</div>
+        <div class="cartTitle" *ngIf="UserLogicService.SuccessfulLoginServerResponse.userData.userType == 'admin'">Admin Page</div>
+        <mat-icon class="cartIconSlider" matBadge={{CartLogicService.cartProducts.length}} (click)="CartLogicService.switchCart()" *ngIf="UserLogicService.SuccessfulLoginServerResponse.userData.userType == 'user'">shopping_cart</mat-icon>
+    </div>
+    <div class="buttonCategory" (click)="ProductLogicService.getAllProducts()" [ngClass]="{clicked:0 === ProductLogicService.activeCategoryId, unClicked:0 != ProductLogicService.activeCategoryId}">All</div>
+    <app-category class="buttonCategory" *ngFor="let category of ProductLogicService.categories" [category]="category"></app-category>
+</div>

@@ -1,0 +1,18 @@
+<div class="product">
+    <div class="image">
+     <img [src]="folderUrl + product.image">
+    </div>
+    <div class="price">
+      {{product.price}}$
+    </div>
+    <div class="nameAndEdit">
+        <div class="name">
+            {{product.name}}
+        </div>
+        <div class="editButton" (click)="openEditModalProduct()">
+            <button mat-raised-button>Edit</button>
+        </div>  
+    </div>
+
+      
+</div>

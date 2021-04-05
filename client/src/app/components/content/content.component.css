@@ -1,0 +1,23 @@
+.content {
+  height: 81vh;
+  margin-top: 21vh;
+}
+
+.admin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.empty {
+  display: flex;
+  width: 200px;
+  padding: 0 5px;
+  margin: 0 15px;
+}

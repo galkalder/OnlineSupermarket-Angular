@@ -1,0 +1,10 @@
+<div class="header">
+    <app-header></app-header>
+</div>
+        
+<div class="center">
+    <app-admin-menu class="menu" *ngIf="UserLogicService.SuccessfulLoginServerResponse.userData.userType == 'admin'"></app-admin-menu>   
+    <app-menu class="menu" [@cartOpen]="CartLogicService.isCartOpen?'open':'close'" *ngIf="UserLogicService.SuccessfulLoginServerResponse.userData.userType == 'user'"></app-menu>
+    <app-content class="content"></app-content>
+  
+</div>

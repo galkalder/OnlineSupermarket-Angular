@@ -1,0 +1,49 @@
+.menu {
+  position: fixed;
+  top: 21vh;
+  width: 23%;
+  height: 89vh;
+  padding: 1px;
+  background-color: rgba(237, 237, 237, 0.425);
+}
+
+.cartProducts {
+  margin-right: 1%;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  overflow-x: hidden;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+}
+
+.paymentButton {
+  width: 49%;
+  height: 8vh;
+  background-color: #041e42;
+  color: white;
+  border-radius: 5px;
+  margin-right: 2%;
+}
+
+.paymentButton button {
+  font-size: 18px;
+  width: 100%;
+  height: 8vh;
+  background-color: #041e42;
+  color: white;
+}
+
+.totalPrice {
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  display: flex;
+  width: 49%;
+  margin-right: 2%;
+  background-color: rgb(247, 247, 76);
+  border-radius: 5px;
+}

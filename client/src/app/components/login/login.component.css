@@ -1,0 +1,92 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e9ebee;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: #ffffff;
+  margin-bottom: auto;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 10px 10px 20px -9px rgba(0, 0, 0, 0.767);
+}
+
+h1 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+input {
+  font-size: 20px;
+  padding: 10px 10px;
+  border: 1px solid #dddfe2;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+button {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin-top: 30px;
+  color: white;
+  border-radius: 10px;
+  background-color: #4267b2;
+  box-shadow: 10px 10px 20px -9px rgba(0, 0, 0, 0.767);
+  cursor: pointer;
+}
+
+.register {
+  color: #1877f2;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.register:hover {
+  text-decoration: underline;
+}
+
+.validation {
+  color: red;
+  margin-top: 3px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: #ffffff;
+  margin-bottom: auto;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 10px 10px 20px -9px rgba(0, 0, 0, 0.767);
+  margin-left: 20px;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.storeProducts {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
